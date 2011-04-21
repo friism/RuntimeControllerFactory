@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeController", "RuntimeController\RuntimeController.csproj", "{229A261D-5C8D-434E-8BDC-869DB0AC88DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeControllerTestApplication", "RuntimeControllerTestApplication\RuntimeControllerTestApplication.csproj", "{87894D37-D7D0-4B5F-B871-874B0A44FAB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{229A261D-5C8D-434E-8BDC-869DB0AC88DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{229A261D-5C8D-434E-8BDC-869DB0AC88DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{229A261D-5C8D-434E-8BDC-869DB0AC88DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87894D37-D7D0-4B5F-B871-874B0A44FAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87894D37-D7D0-4B5F-B871-874B0A44FAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87894D37-D7D0-4B5F-B871-874B0A44FAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87894D37-D7D0-4B5F-B871-874B0A44FAB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
