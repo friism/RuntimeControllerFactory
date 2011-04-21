@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="RuntimeControllerActivator.cs" />
-    <Compile Include="RuntimeControllerFactory.cs" />
     <Compile Include="IRuntimeControllerPathProvider.cs" />
     <Compile Include="CSharpControllerFile.cs" />
     <Compile Include="DefaultPathProvider.cs" />
