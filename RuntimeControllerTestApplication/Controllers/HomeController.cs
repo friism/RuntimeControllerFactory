@@ -6,6 +6,7 @@ namespace RuntimeControllerTestApplication.Controllers
 	{
 		public ActionResult Index()
 		{
+			ViewBag.Text = "Change me!";
 			return View();
 		}
 	}
