@@ -45,6 +45,7 @@
     <Compile Include="IRuntimeControllerPathProvider.cs" />
     <Compile Include="CSharpControllerFile.cs" />
     <Compile Include="DefaultPathProvider.cs" />
+    <Compile Include="RuntimeControllerDependencyResolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
