@@ -47,7 +47,7 @@ namespace Fusonic.Web.Mvc.RuntimeController
 			
 			if(match.Success)
 			{
-				source = source.TrimEnd(new char[] {' ', '\n'});
+				source = source.TrimEnd();
 				source = source.Substring(0, source.Length - 1);
 				source = "using " + match.Groups[1] + ";\n" 
 					+ source.Replace(match.Value, string.Empty);
