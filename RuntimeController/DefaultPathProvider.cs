@@ -3,6 +3,7 @@
 //
 // Author:
 // David Roth <david.roth@fusonic.net>
+// Waldyr Felix <waldyrfelix@gmail.com>
 //
 // Copyright (c) 2011 Fusonic GmbH (http://www.fusonic.net)
 //
@@ -30,12 +31,18 @@ using System.Web.Routing;
 
 namespace Fusonic.Web.Mvc.RuntimeController
 {
-	public class DefaultPathProvider : IRuntimeControllerPathProvider
-	{
-		public string GetPath (RequestContext requestContext, string controllerName)
-		{
-			return controllerName != null ? AppDomain.CurrentDomain.BaseDirectory +
-				Path.DirectorySeparatorChar + "Controllers" + Path.DirectorySeparatorChar + controllerName + ".cs" : null;
-		}
-	}
+    public class DefaultPathProvider : IRuntimeControllerPathProvider
+    {
+        public string GetPath(RequestContext requestContext, string controllerName)
+        {
+            if (controllerName == null)
+            {
+                return null;
+            }
+
+            string area = Convert.ToString(requestContext.RouteData.DataTokens["Area"]);
+            string relativePath = Path.Combine("\\", String.IsNullOrEmpty(area) ? String.Empty : "Areas", area, "Controllers", controllerName + ".cs");
+            return requestContext.HttpContext.Server.MapPath(relativePath);
+        }
+    }
 }
