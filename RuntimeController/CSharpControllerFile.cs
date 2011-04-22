@@ -42,7 +42,7 @@ namespace Fusonic.Web.Mvc.RuntimeController
 		
 		public static CSharpControllerFile Parse(string source)
 		{
-			Regex regex = new Regex("namespace(.*)\n{");
+			Regex regex = new Regex(@"namespace\s*(.*)\s*{");
 			Match match = regex.Match(source);
 			
 			if(match.Success)
