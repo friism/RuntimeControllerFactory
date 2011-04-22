@@ -37,9 +37,6 @@ namespace Fusonic.Web.Mvc.RuntimeController
 {
 	public class CSharpControllerFile
 	{
-		private CSharpControllerFile ()
-		{}
-		
 		public static CSharpControllerFile Parse(string source)
 		{
 			Regex regex = new Regex(@"namespace\s*(.*)\s*{");
