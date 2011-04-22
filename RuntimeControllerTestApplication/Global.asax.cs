@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Reflection;
+using System.Web.Mvc;
 using System.Web.Routing;
 using Fusonic.Web.Mvc.RuntimeController;
 
@@ -33,7 +34,8 @@ namespace RuntimeControllerTestApplication
 			RegisterGlobalFilters(GlobalFilters.Filters);
 			RegisterRoutes(RouteTable.Routes);
 
-			DependencyResolver.SetResolver(new RuntimeControllerDependencyResolver());
+			DependencyResolver.SetResolver(new RuntimeControllerDependencyResolver(
+				Assembly.GetExecutingAssembly()));
 		}
 	}
 }
