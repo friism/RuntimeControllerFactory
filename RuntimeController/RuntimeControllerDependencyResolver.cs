@@ -7,12 +7,19 @@ namespace Fusonic.Web.Mvc.RuntimeController
 {
 	public class RuntimeControllerDependencyResolver : IDependencyResolver
 	{
+		Assembly _applicationAssembly;
+
+		public RuntimeControllerDependencyResolver(Assembly applicationAssembly)
+		{
+			_applicationAssembly = applicationAssembly;
+		}
+
 		public object GetService(Type serviceType)
 		{
 			if (serviceType == typeof(IControllerActivator))
 			{
 				var runtimeControllerActivator = new RuntimeControllerActivator(new DefaultPathProvider());
-				runtimeControllerActivator.ReferenceAssembly(Assembly.GetExecutingAssembly());
+				runtimeControllerActivator.ReferenceAssembly(_applicationAssembly);
 				return runtimeControllerActivator;
 			}
 			return null;
